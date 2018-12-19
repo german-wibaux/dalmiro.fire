@@ -15,6 +15,9 @@ import { UpdateArticComponent } from './components/update-artic/update-artic.com
 import { CategoryComponent } from './category/category.component';
 import { NewsComponent } from './news/news.component';
 import { TechnicalComponent } from './technical/technical.component';
+import { MelaminaComponent } from './components/melamina/melamina.component';
+import { PrefinishedComponent } from './components/prefinished/prefinished.component';
+import { VinilicoComponent } from './components/vinilico/vinilico.component';
 
 
 const routes: Routes = [
@@ -24,6 +27,9 @@ const routes: Routes = [
     { path: 'private', canActivate:[AuthGuardService], component: AdminComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'product', component: CategoryComponent },
+    { path: 'melamina', component: MelaminaComponent },
+    { path: 'prefinished', component: PrefinishedComponent },
+    { path: 'vinilico', component: VinilicoComponent },
     { path: 'news', component: NewsComponent },
     { path: 'technical', component: TechnicalComponent },
     { path: 'update-artic/:id', component: UpdateArticComponent },

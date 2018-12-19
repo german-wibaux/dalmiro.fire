@@ -58,6 +58,11 @@
   width: 20%;
   position: absolute;
   bottom: 0;
+  z-index: 5;
+}
+
+.info-dates {
+  color: white !important;
 }
 
 /* Grow */
