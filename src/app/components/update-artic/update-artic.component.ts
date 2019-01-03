@@ -51,8 +51,7 @@ export class UpdateArticComponent implements OnInit {
 
    onUpdateArticle(article: ArticleInterface){
     this.articleService.updateArticle(article);
-      this.router.navigate(['/private']);
-   
+      this.router.navigate(['/private']);  
    }
 
    uploadFile(event) {
@@ -139,7 +138,7 @@ export class UpdateArticComponent implements OnInit {
 
   onChange(event) {
     this.article.category = event.target.value;
-    console.log(this.article.category);
+    //console.log(this.article.category);
   }
 
 }

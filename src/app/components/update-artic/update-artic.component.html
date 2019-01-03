@@ -8,7 +8,7 @@
   </div>
   <div class="row justify-content-center">
       <div class="col-12 col-lg-9">
-          <form (ngSubmit)="onChange(article)" *ngIf="article" >          
+          <form (ngSubmit)="onUpdateArticle(article)" *ngIf="article" >          
               
               
               <div class="form-row form-group">
@@ -21,14 +21,14 @@
                       <input [(ngModel)]='article.description'  [ngModelOptions]="{standalone: true}" #descripcion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Descripcion" />            
                   </div> -->
                   <select (change)="onChange($event)" class="custom-select">
-                      <option  selected disabled hidden>{{ category }}</option>
-                      <option value="vinilico" >Vinilico</option>
-                      <option  value="prefinished" >Prefinished</option>
-                      <!-- <option value="Varios" >Varios</option>
-                      <option value="Zocalo-Contramarcos">Zocalo-Contramarcos</option>
-                      <option value="Contramarcos" >Contramarcos</option>
-                      <option value="Melaminico" >Melaminico</option>
-                      <option value="Revestimientos">Revestimientos</option> -->
+                    <option  selected disabled hidden>{{ category }}</option>
+                    <option value="vinilico" >Vinilico</option>
+                    <option  value="prefinished" >Prefinished</option>
+                    <option value="Varios" >Varios</option>
+                    <option value="zocalos-contramarcos">Zocalos-Contramarcos</option>
+                    <option value="contramarcos" >Contramarcos</option>
+                    <option value="melaminico" >Melaminico</option>
+                    <option value="revestimientos">Revestimientos</option>
                   </select>
               </div>
               <div class="">
