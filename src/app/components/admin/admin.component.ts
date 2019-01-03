@@ -23,8 +23,7 @@ export class AdminComponent implements OnInit, OnDestroy {
     private articleService: ArticleService
   ) { 
     this.articleService.getArticles().subscribe( articles => {
-      /** List every properties */
-      console.log(articles);
+      /** List every properties */      
       this.articles = articles;
     });
   }

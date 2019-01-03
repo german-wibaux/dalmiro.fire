@@ -11,9 +11,10 @@
 <table class="table table-borderless table-hover align-items-center">
     <thead>
         <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Codigo</th>
-            <th scope="col">Descripcion</th>            
+            <th scope="col">Categoria</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Novedad</th>
+            <th scope="col">Ofertas</th>            
             <th scope="col"></th>
         </tr>
     </thead>
@@ -25,14 +26,17 @@
                     <a class="media align-items-center">
                         <!-- <img alt="Image" src="assets/img/logo-snapchat.svg" class="avatar rounded avatar-sm" /> -->
                         <div class="media-body">
-                            <span class="h6 mb-0">{{ article.name }}</span>
+                            <span class="h6 mb-0">{{ article.category }}</span>
                             <!-- <span class="text-muted">Social Media</span> -->
                         </div>
                     </a>
                 </th>
-                <td>{{ article.code }}</td>
+                
                 <td>{{ article.description }}</td>
-             
+                <td *ngIf="article.news">Si</td>
+                <td *ngIf="!article.news">No</td>
+                <td *ngIf="article.offer">Si</td>
+                <td *ngIf="!article.offer">No</td>
                 <td>
                     <div class="dropdown">
                         <button class="btn btn-sm btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow" type="button" id="dropdownMenuButton-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

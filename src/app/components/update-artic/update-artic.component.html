@@ -1,73 +1,80 @@
 <div class="col-12 card-body bg-secondary">
-  <div>
-      <button type="button" class="btn btn-primary" routerLink='/private' >Volver atras</button>    
-  </div>
-<div class="text-center mb-5">
-    <h1 class="h2 mb-2">Editar un articulo</h1>
-    <span>No hay campos obligatorios lo que se cargue es lo que se vera en la pagina</span>
-</div>
-<div class="row justify-content-center">
-    <div class="col-12 col-lg-9">
-        <form (ngSubmit)="onUpdateArticle(article)" #formNew="ngForm" >
-            <div class="form-row form-group">
-                <div class="col">
-                    <input [(ngModel)]="article.name" [ngModelOptions]="{standalone: true}" #nombre="ngModel" class="form-control form-control-lg" type="text"  placeholder="Nombre" />
-                </div>
-            </div>
-            <div class="form-row form-group">
-                <div class="col">
-                    <input [(ngModel)]='article.code'  [ngModelOptions]="{standalone: true}" #codigo='ngModel' class="form-control form-control-lg" type="text"  placeholder="Codigo" />
-                </div>                 
-            </div>
-            <div class="form-row form-group">
-                <div class="col">
-                    <input [(ngModel)]='article.state' [ngModelOptions]="{standalone: true}" #estado='ngModel' class="form-control form-control-lg" type="text"  placeholder="Estado" />
-                </div>
-            </div>
-            <div class="form-row form-group">
-                <div class="col">
-                    <input [(ngModel)]='article.description'  [ngModelOptions]="{standalone: true}" #descripcion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Descripcion" />            
-                </div>
-            </div>
-            <div class="form-row form-group">
-              <div class="col">
-                  <input [(ngModel)]='article.kind'  [ngModelOptions]="{standalone: true}" #habitaciones='ngModel' class="form-control form-control-lg" type="text"  placeholder="Tipo" />            
-              </div>
-            </div>
-            <div class="form-row form-group">
-              <div class="col">
-                  <input [(ngModel)]='article.price'  [ngModelOptions]="{standalone: true}" #banios='ngModel' class="form-control form-control-lg" type="text" placeholder="Precio" />            
-              </div>
-            </div>
-            
-            <div class="form-row form-group" >
-              <div class="col" >
-                  <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
-                  <div>{{ uploadPercent | async }}</div>
-                  <!-- <div class="progress">
-                      <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
-                    </div> -->
-              </div>
-            </div>
-            
-            <div class="form-row form-group" >
-              <div class="col" >
-                  <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
-                  <div>{{ uploadPercent | async }}</div>
-                  <!-- <div class="progress">
-                      <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
-                    </div> -->
-              </div>
-            </div>           
-           
-            <div class="form-row form-group">
-                <div class="col">
-                    <button class="btn btn-block btn-success btn-lg" type="submit">Crear Propiedad</button>
-                </div>
-            </div>
-            
-        </form>
+    <div>
+        <button type="button" class="btn btn-primary" routerLink='/private' >Volver atras</button>    
     </div>
-</div>
-
-</div>
+  <div class="text-center mb-5">
+      <h1 class="h2 mb-2">Actualizar el contenido de un articulo</h1>
+      <span>No hay campos obligatorios lo que se cargue es lo que se vera en la pagina</span>
+  </div>
+  <div class="row justify-content-center">
+      <div class="col-12 col-lg-9">
+          <form (ngSubmit)="onChange(article)" *ngIf="article" >          
+              
+              
+              <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='article.description'  [ngModelOptions]="{standalone: true}" #descripcion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Descripcion" />            
+                  </div>
+              </div>
+              <div class="form-row form-group">
+                  <!-- <div class="col">
+                      <input [(ngModel)]='article.description'  [ngModelOptions]="{standalone: true}" #descripcion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Descripcion" />            
+                  </div> -->
+                  <select (change)="onChange($event)" class="custom-select">
+                      <option  selected disabled hidden>{{ category }}</option>
+                      <option value="vinilico" >Vinilico</option>
+                      <option  value="prefinished" >Prefinished</option>
+                      <!-- <option value="Varios" >Varios</option>
+                      <option value="Zocalo-Contramarcos">Zocalo-Contramarcos</option>
+                      <option value="Contramarcos" >Contramarcos</option>
+                      <option value="Melaminico" >Melaminico</option>
+                      <option value="Revestimientos">Revestimientos</option> -->
+                  </select>
+              </div>
+              <div class="">
+                <div class="col">
+                    <input [(ngModel)]='article.news'  [ngModelOptions]="{standalone: true}"  class="" type="checkbox"  placeholder="Novedad" />            
+                    Novedad
+                  </div>
+              </div>
+              <div class="">
+                <div class="col">
+                    <input [(ngModel)]='article.offer'  [ngModelOptions]="{standalone: true}" #banios='ngModel' class="" type="checkbox" placeholder="Oferta" />            
+                    Oferta  
+                  </div>
+              </div>
+              
+              <div class="form-row form-group" >
+                <div class="col" >
+                    <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                    <div>{{ uploadPercent | async }}</div>
+                    <a href='{{ article.images[0] }}' target="_blank" *ngIf="article.images[0]" >Imagen 1</a>
+                    <!-- <div class="progress">
+                        <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
+                      </div> -->
+                </div>
+              </div>
+              
+              <div class="form-row form-group" >
+                <div class="col" >
+                    <input  type="file" (change)="uploadFile1($event)" accept=".png,.jpg" />
+                    <div>{{ uploadPercent1 | async }}</div>
+                    <a href='{{ article.images[1] }}' target="_blank" *ngIf='article.images[1]' >Imagen 2</a>
+                    <!-- <div class="progress">
+                        <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
+                      </div> -->
+                </div>
+              </div>           
+             
+              <div class="form-row form-group">
+                  <div class="col">
+                      <button class="btn btn-block btn-success btn-lg" type="submit">Actualizar Articulo</button>
+                  </div>
+              </div>
+              
+          </form>
+      </div>
+  </div>
+  
+  </div>
+  

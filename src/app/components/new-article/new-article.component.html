@@ -8,36 +8,40 @@
 </div>
 <div class="row justify-content-center">
     <div class="col-12 col-lg-9">
-        <form (ngSubmit)="onSaveArticle(formNew)" #formNew="ngForm" >
-            <div class="form-row form-group">
-                <div class="col">
-                    <input [(ngModel)]="article.name" [ngModelOptions]="{standalone: true}" #nombre="ngModel" class="form-control form-control-lg" type="text"  placeholder="Nombre" />
-                </div>
-            </div>
-            <div class="form-row form-group">
-                <div class="col">
-                    <input [(ngModel)]='article.code'  [ngModelOptions]="{standalone: true}" #codigo='ngModel' class="form-control form-control-lg" type="text"  placeholder="Codigo" />
-                </div>                 
-            </div>
-            <div class="form-row form-group">
-                <div class="col">
-                    <input [(ngModel)]='article.state' [ngModelOptions]="{standalone: true}" #estado='ngModel' class="form-control form-control-lg" type="text"  placeholder="Estado" />
-                </div>
-            </div>
+        <form (ngSubmit)="onSaveArticle(formNew)" #formNew="ngForm" >          
+            
+            
             <div class="form-row form-group">
                 <div class="col">
                     <input [(ngModel)]='article.description'  [ngModelOptions]="{standalone: true}" #descripcion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Descripcion" />            
                 </div>
             </div>
             <div class="form-row form-group">
+                    <!-- <div class="col">
+                        <input [(ngModel)]='article.description'  [ngModelOptions]="{standalone: true}" #descripcion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Descripcion" />            
+                    </div> -->
+                    <select (change)="onChange($event)" class="custom-select">
+                        <option  selected disabled hidden>Categoria</option>
+                        <option value="vinilico" >Vinilico</option>
+                        <option  value="prefinished" >Prefinished</option>
+                        <option value="Varios" >Varios</option>
+                        <option value="zocalo-contramarcos">Zocalos-Contramarcos</option>
+                        <option value="contramarcos" >Contramarcos</option>
+                        <option value="melaminico" >Melaminico</option>
+                        <option value="revestimientos">Revestimientos</option>
+                    </select>
+                </div>
+            <div class="">
               <div class="col">
-                  <input [(ngModel)]='article.kind'  [ngModelOptions]="{standalone: true}" #habitaciones='ngModel' class="form-control form-control-lg" type="text"  placeholder="Tipo" />            
-              </div>
+                  <input [(ngModel)]='article.news'  [ngModelOptions]="{standalone: true}" #news='ngModel' class="" type="checkbox"  placeholder="Novedad" />            
+                  Novedad
+                </div>
             </div>
-            <div class="form-row form-group">
+            <div class="">
               <div class="col">
-                  <input [(ngModel)]='article.price'  [ngModelOptions]="{standalone: true}" #banios='ngModel' class="form-control form-control-lg" type="text" placeholder="Precio" />            
-              </div>
+                  <input [(ngModel)]='article.offer'  [ngModelOptions]="{standalone: true}" #offer='ngModel' class="" type="checkbox" placeholder="Oferta" />            
+                  Oferta  
+                </div>
             </div>
             
             <div class="form-row form-group" >
@@ -52,8 +56,8 @@
             
             <div class="form-row form-group" >
               <div class="col" >
-                  <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
-                  <div>{{ uploadPercent | async }}</div>
+                  <input  type="file" (change)="uploadFile1($event)" accept=".png,.jpg" />
+                  <div>{{ uploadPercent1 | async }}</div>
                   <!-- <div class="progress">
                       <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
                     </div> -->
@@ -62,7 +66,7 @@
            
             <div class="form-row form-group">
                 <div class="col">
-                    <button class="btn btn-block btn-success btn-lg" type="submit">Crear Propiedad</button>
+                    <button class="btn btn-block btn-success btn-lg" type="submit">Crear Articulo</button>
                 </div>
             </div>
             

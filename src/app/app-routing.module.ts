@@ -23,7 +23,7 @@ import { VinilicoComponent } from './components/vinilico/vinilico.component';
 const routes: Routes = [
     { path: '', component: HomeComponent  },
     { path: 'login', component: LoginPageComponent},    
-    { path: 'new-article', component: NewArticleComponent },
+    { path: 'new-article', canActivate:[AuthGuardService] , component: NewArticleComponent },
     { path: 'private', canActivate:[AuthGuardService], component: AdminComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'product', component: CategoryComponent },
@@ -32,7 +32,7 @@ const routes: Routes = [
     { path: 'vinilico', component: VinilicoComponent },
     { path: 'news', component: NewsComponent },
     { path: 'technical', component: TechnicalComponent },
-    { path: 'update-artic/:id', component: UpdateArticComponent },
+    { path: 'update-artic/:id', canActivate:[AuthGuardService] , component: UpdateArticComponent },
     { path: 'about', component: AboutComponent },
     { path: 'wait', component: WaitingComponent },
     { path: '**', component: NotFoundComponent }

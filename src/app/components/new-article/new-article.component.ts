@@ -15,18 +15,18 @@ import { Router } from '@angular/router';
 export class NewArticleComponent implements OnInit {
 
   uploadPercent: Observable<number>;
+  uploadPercent1: Observable<number>;
   downloadURL: Observable<string>; // For download files
   snapshot: Observable<any>;
   // Main task
   task: AngularFireUploadTask;
 
   article: ArticleInterface = {
-    code: '',
     description: '',
+    category:'',
     images: [],
-    kind: '',
-    name: '',
-    price: ''
+    news: false,
+    offer: false
   }
 
   constructor(private articleService: ArticleService, 
@@ -76,8 +76,59 @@ export class NewArticleComponent implements OnInit {
       console.log(error);
     });
 
+    
+
+    
+
     //*********************Codigo pa la barra de progreso y algo mas si pinta************************
     //     <div>{{ uploadPercent | async }}</div>
   }
+
+  uploadFile1(event) {
+    // console.log(event);
+
+    const file = event.target.files[0];
+
+
+    if (file.type.split('/')[0] !== 'image') {
+      console.error('unsupported file type dalmiro-app')
+      return;
+    }
+    let loading = true;
+    const day = new Date();
+    const path = 'articles/' + day.getTime() + '/' + file.name;
+    const customMetadata = { app: 'taul-app' };
+    const ref = this.storage.ref(path);
+    this.task = this.storage.upload(path, file, { customMetadata });
+    this.uploadPercent1 = this.task.percentageChanges();
+
+
+    return from(this.task).pipe(
+      switchMap(() => ref.getDownloadURL()),
+      tap(url => {
+        // use url here, e.g. assign it to a model       
+        this.article.images.push(url);        
+      }),
+      finalize(() => loading = false)
+    ).subscribe(() => {
+      // success
+    }, error => {
+      // failure
+      console.log(error);
+    });
+
+    
+
+    
+
+    //*********************Codigo pa la barra de progreso y algo mas si pinta************************
+    //     <div>{{ uploadPercent | async }}</div>
+  }
+
+  onChange(event) {
+    this.article.category = event.target.value;
+    //console.log(this.article.category);
+  }
+
 
 }

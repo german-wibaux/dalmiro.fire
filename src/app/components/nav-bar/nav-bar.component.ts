@@ -30,7 +30,9 @@ export class NavBarComponent implements OnInit {
     alert('Esta seccion todavia no se encuentra disponible');
   }
 
-  
+  isLoggedIn(){
+    return this.authService.isLoggedIn();
+  }
 
   onLogout() {    
     this.authService.logout();

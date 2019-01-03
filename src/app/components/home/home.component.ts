@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from '../../services/article.service';
 
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private articlesService: ArticleService,
-    private route: Router
+    private route: ActivatedRoute
   ) { 
     this.articlesService.getArticles().subscribe( properties => {
       /** List every properties */
@@ -37,5 +37,12 @@ export class HomeComponent implements OnInit {
   // updateCurso(property: PropiedadInterface) {
   //   this.propertiesService.updateProperty(property);
   // }
+
+  onAnchorClick ( ) {
+    this.route.fragment.subscribe ( f => {
+      const element = document.querySelector ( "#" + f )      
+      if ( element ) element.scrollIntoView ( )
+    });    
+  }
 
 }

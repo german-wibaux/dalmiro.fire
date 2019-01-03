@@ -1,11 +1,9 @@
 export interface ArticleInterface {
     id?: string;
-    code?: string;
     description?: string;
+    category?: string;
     images?: string[];
-    kind?: string;
-    name?: string;
-    price?: string;
-    state?: string;    
+    news?: boolean;
+    offer?: boolean;   
 }
 
