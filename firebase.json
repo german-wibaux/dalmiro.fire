@@ -7,10 +7,11 @@
     "indexes": "firestore.indexes.json"
   },
   "functions": {
-    "predeploy": "npm --prefix \"%RESOURCE_DIR%\" run build"
+    "predeploy": [],
+    "source": "functions" 
   },
   "hosting": {
-    "public": "dist/dalmiro-app-final",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
