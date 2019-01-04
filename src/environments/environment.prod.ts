@@ -1,11 +1,10 @@
 export const environment = {
     production: true,
-    firebaseConfig : {
-      apiKey: "AIzaSyC7tjcg6UPK9SwJb2v8ETmaHLBMfEvKhZU",
-      authDomain: "moira-app.firebaseapp.com",
-      databaseURL: "https://moira-app.firebaseio.com",
-      projectId: "moira-app",
-      storageBucket: "moira-app.appspot.com",
-      messagingSenderId: "612480358554"
+    firebaseConfig : {apiKey: "AIzaSyDL2RdJRnSGKzuEL9TaI6KKDr1g2UZLDAc",
+  authDomain: "dalmiro-app.firebaseapp.com",
+  databaseURL: "https://dalmiro-app.firebaseio.com",
+  projectId: "dalmiro-app",
+  storageBucket: "dalmiro-app.appspot.com",
+  messagingSenderId: "1066549058516"
     }
   };
