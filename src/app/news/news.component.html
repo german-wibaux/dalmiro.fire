@@ -1,3 +1,30 @@
-<p>
-  news works!
-</p>
+<article class="seccionT2 principal">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="cat-texto"><h1>Novedades</h1></div>
+        <div *ngFor="let article of articles" >
+          <div class="novedades" *ngIf="article.offer; else novedad"  >
+            <img class="col-sm-3 img-responsive" src="{{ article.images[0] }}">
+              <h2>Oferta!</h2>
+              <p>{{ article.description }}</p>
+            
+
+          </div>
+
+          <ng-template #novedad>
+             
+            
+          <div class="novedades" *ngIf="article.news" >
+            <img class="col-sm-3 img-responsive" src="{{ article.images[0] }}">
+          
+            <p>{{ article.description }}</p>
+              
+
+          </div>
+        </ng-template>
+      </div>
+        
+     
+    </div>
+  </div>
+</article>

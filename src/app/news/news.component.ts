@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticleInterface } from '../models/articleInterface';
+import { ArticleService } from '../services/article.service';
 
 @Component({
   selector: 'app-news',
@@ -7,7 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-  constructor() { }
+  articles:  ArticleInterface[] = [];
+
+  constructor(private articleService: ArticleService) { 
+    this.articleService.getArticles().subscribe( articles => {
+      /** List every properties */
+      //console.log(articles);
+      this.articles = articles;
+      }
+    );
+           
+    
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,15 @@
+.seccionT2{
+    /*background-color:rgb(230, 120, 23);*/
+    height:auto;
+    border-top: 12px solid rgb(20,77,48);
+    /*border-bottom: 2px solid rgb(20,77,48);*/
+    width:100%;
+    margin-top: 0px;
+  }
+  .seccionT2 ul{
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  .principal {
+    background-color: #ffad33;
+}

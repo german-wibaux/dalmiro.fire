@@ -1,3 +1,26 @@
-<p>
-  vinilico works!
-</p>
+<div class="container-fluid principal" *ngIf="articles.length > 0; else cargando"  >
+  <article class="seccionT2" *ngFor="let article of articles" >
+      <div class="container-fluid">
+        <div class="row">
+            <div class="cat-texto"><h3>Detalles del producto</h3></div>
+          <div class="melamina">
+              <img class="col-sm-3 img-responsive" src="{{ article.images[0] }}">
+              <img class="col-sm-3 img-responsive" src="{{ article.images[1] }}">
+              
+              <p> {{ article.description }} </p>
+                                          
+      
+          </div>
+        
+      
+        </div>
+      </div>
+      </article>
+</div>
+
+<ng-template #cargando>
+<div>
+  
+  <h3>No hay contenido para mostrar</h3>
+</div>  
+</ng-template>
