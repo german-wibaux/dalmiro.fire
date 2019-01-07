@@ -1,12 +1,15 @@
-@media (min-width: 380px) {
+@media (min-width: 320px) {
     .section-principal {
-        display: none !important ;
+        /* display: none !important ; */
+        flex-direction: column ;
+        text-align: -webkit-center;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1240px) {
     .section-principal {
-        display: flex !important ;
+        /* display: flex !important ;*/
+         flex-direction: unset;         
     }
 }
 
@@ -114,13 +117,13 @@ hr.style-five:after {  /* Not really supposed to work, but does */
     content: "\00a0";  /* Prevent margin collapse */
 }
 
-.row > h4 {
+.justify-content-center > h4 {
     padding: 1rem;
 }
 
-.space-sm {
+/* .space-sm {
     padding: 0 !important;
-}
+} */
 
 .map-dalmiro {
     border: 1rem solid green;

@@ -1,13 +1,20 @@
 @media (min-width: 768px) { 
-  .info-nav {
+  .info-nav > .info-dates {
     right: unset !important;
     display: block !important;
+    float: right !important;
   }
  }
 
  @media (min-width: 380px) {
   .info-nav {
-    display: none ;
+    /* margin-right: 11rem !important;  */
+  }
+  .info-nav > p {
+    width: 79% !important;
+    padding-left: 15rem;
+    text-align: center;
+    float: unset !important;
   }
  }
 
