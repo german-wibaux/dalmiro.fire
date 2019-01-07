@@ -1,3 +1,40 @@
+@media (min-width: 320px) {
+    .section-principal {
+        /* display: none !important ; */
+        display: none !important;
+        /* text-align: -webkit-center; */
+    }
+    .container-paral {
+        
+        width: 330px !important;
+        height: 255px !important;
+    }
+   
+    .section-responsive {
+        display: block !important;
+    }
+    .section-responsive > .container {
+        text-align: -webkit-center;
+    }
+    
+    /* .map-dalmiro {
+        width: 25rem !important;
+        height: 35rem !important;
+    } */
+
+}
+
+@media (min-width: 1240px) {
+    .section-principal {
+        /* display: flex !important ;*/
+         flex-direction: unset !important;
+         display: flex !important;         
+    }
+    .section-responsive {
+        display: none !important;
+    }
+    
+}
 .container-fluid {
     padding: 0 !important;
 }
@@ -113,4 +150,13 @@ hr.style-five:after {  /* Not really supposed to work, but does */
 
 .map-dalmiro {
     border: 1rem solid green;
+}
+
+.list-group-item {
+    background-color: #ffad33;
+}
+
+.list-group-item > a {
+    color: white !important;
+    text-decoration: none;
 }
