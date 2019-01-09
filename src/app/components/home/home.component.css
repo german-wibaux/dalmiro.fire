@@ -41,11 +41,13 @@
 }
 
 .principal {
-    background-color: #ffad33;
+    /* background-color: #ffad33; */
+    background-color: white;
 }
 
 .ventas {
-    background-color: #ff9900 !important;
+    /* background-color: #ff9900 !important; */
+    background-color: white !important;
     width: 100% !important;
     padding-top: 0;
     display: flex;
@@ -53,7 +55,8 @@
 }
 
 .alquileres {
-    background-color: #ffad33 !important;
+    /* background-color: #ffad33 !important; */
+    background-color: white !important;
     width: 100% !important;
     /* padding-top: 6rem; */
 }
@@ -82,7 +85,8 @@
 }
 
 .space-sm {
-    background-color: #ffad33;
+    /* background-color: #ffad33; */
+    background-color: white;
 }
 
 .container-paral {

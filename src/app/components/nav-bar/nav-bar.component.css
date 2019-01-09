@@ -47,9 +47,10 @@
   z-index: 1;
 }
 
-.bg-dark{
-  background-image: url("/assets/img/moira/cabecera3.jpg") !important;
+.nav-container{
+  /* background-image: url("/assets/img/moira/fondo-header.jpg") !important; */
   border-bottom: 0.4rem solid green;
+  min-height: unset !important;
 }
 
 .navbar-collapse {
@@ -185,5 +186,74 @@
 
 .navbar-dark .navbar-toggler {
   z-index: 2;
+}
+
+.background-header { 
+  background-image: url("/assets/img/chalita/fondo-header.jpg");
+  background-position: center;
+  height: 19.5rem; 
+  width: 100%;
+  border-style: solid;
+  border-width: 5px;
+  display: flex;
+  align-items: center;
+  border-bottom: unset !important;
+  /* width: 100%;    
+  background-size: cover;     */
+}
+/* .navbar .navbar-expand-lg .navbar-dark .bg-dark {
+  background-image: url("/assets/img/chalita/fondo-header.jpg") !important;
+  background-color: unset !important;
+} */
+
+.bg-dark{
+  background-image: url("/assets/img/moira/fondo-header.jpg") !important;
+  height: 19rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+    background-size: cover;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.bg-images {
+  
+    /* The image used */
+    background-image: url("/assets/img/moira/fondo-header.jpg");
+  
+    min-height: 17rem;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+  
+    background-size: cover;
+  
+    /* Needed to position the navbar */
+    position: relative;
+    
+    padding-top: 0;
+}
+
+.navbar-collapse {
+  background-color: #eca87a;
+    position: absolute;
+    width: 100%;
+}
+
+.container > .navbar {
+  padding-top: 0;
+  height: 19rem !important;
+  display: flex;
+  align-items: flex-end;
+}
+
+.navbar-brand  {
+  padding-left: 12rem;
 }
 
