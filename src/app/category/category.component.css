@@ -39,23 +39,7 @@
     padding: 0 !important;
 }
 
-.principal {
-    background-color: #ffad33;
-}
 
-.ventas {
-    background-color: #ff9900 !important;
-    width: 100% !important;
-    padding-top: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.alquileres {
-    background-color: #ffad33 !important;
-    width: 100% !important;
-    /* padding-top: 6rem; */
-}
 
 .card-footer {
     display: flex !important;
@@ -81,7 +65,7 @@
 }
 
 .space-sm {
-    background-color: #ffad33;
+    background-color: white;
 }
 
 .container-paral {
@@ -107,7 +91,7 @@
 
     .section-principal{
         display: flex;
-        height: 30rem;
+        height: 40rem;
     }
 
 
