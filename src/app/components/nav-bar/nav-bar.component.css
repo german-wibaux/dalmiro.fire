@@ -11,6 +11,19 @@
     /*align-self: flex-start;
     height: 12rem; */
   }
+  .navbar-brand  {
+    display: none ;
+  }
+  .container > .navbar {
+    height: unset !important; 
+ }
+ }
+
+ @media (min-width: 1920px) {
+  
+  .navbar-brand  {
+    display: none ;
+  }
  }
 
  @media (min-width: 300px) {
@@ -32,6 +45,12 @@
     /*align-self: flex-start;
     height: 12rem; */
   }
+  .navbar-brand > img {
+    display: block !important;
+  }
+  .container > .navbar {
+     height: 19rem; 
+  }
  }
 
 .navbar-brand > img {
@@ -49,7 +68,7 @@
 
 .nav-container{
   /* background-image: url("/assets/img/moira/fondo-header.jpg") !important; */
-  border-bottom: 0.4rem solid green;
+  /* border-bottom: 0.4rem solid green; */
   min-height: unset !important;
 }
 
@@ -207,13 +226,14 @@
 } */
 
 .bg-dark{
-  background-image: url("/assets/img/moira/fondo-header.jpg") !important;
+  /* background-image: url("/assets/img/moira/fondo-header.jpg") !important;
   height: 19rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   
-    background-size: cover;
+    background-size: cover; */
+    background-color: #eca87a !important;
 }
 
 .container {
@@ -248,7 +268,7 @@
 
 .container > .navbar {
   padding-top: 0;
-  height: 19rem !important;
+  /* height: 19rem !important; */
   display: flex;
   align-items: flex-end;
 }
@@ -256,4 +276,9 @@
 .navbar-brand  {
   padding-left: 12rem;
 }
+
+.navbar-brand > img {
+  display: none;
+}
+
 

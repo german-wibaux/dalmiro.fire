@@ -1,9 +1,18 @@
+<section class="text-white height-70">
+  <img alt="Image" src="/assets/img/moira/fondo-header.jpg" class="bg-image " />
+  <a class="navbar-brand" routerLink='/'>
+      <img alt="Dalmiro Suarez" src="assets/img/moira/logo-nuevo.png" />
+      
+      
+  </a>
+  <h1>Pisos y soluciones</h1>
+</section>
 <div class="container-fluid principal" *ngIf="articles.length > 0; else cargando"  >
     <article class="seccionT2" *ngFor="let article of articles" >
         <div class="container-fluid">
           <div class="row">
               <div class="cat-texto"><h3>Detalles del producto</h3></div>
-            <div class="melamina">
+            <div class="col-10">
                 <img class="col-sm-3 img-responsive" src="{{ article.images[0] }}">
                 <img class="col-sm-3 img-responsive" src="{{ article.images[1] }}">
                 

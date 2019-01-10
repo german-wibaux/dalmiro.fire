@@ -22,7 +22,26 @@
         height: 35rem !important;
     } */
 
+    .navbar-brand {
+        display: none ;
+    }
+
+    .text-white > h1 {
+        display: none ;
+    }
+
 }
+
+@media (min-width: 1024px) { 
+    .navbar-brand {
+        display: block !important;
+    }
+
+    .text-white > h1 {
+        display: block !important;
+    }
+}
+
 
 @media (min-width: 1240px) {
     .section-principal {
@@ -32,6 +51,13 @@
     }
     .section-responsive {
         display: none !important;
+    }
+    .navbar-brand {
+        display: block !important;
+    }
+
+    .text-white > h1 {
+        display: block !important;
     }
     
 }
@@ -179,4 +205,22 @@ hr.style-five:after {  /* Not really supposed to work, but does */
     color: white !important;
     text-decoration: none;
 }
+
+.text-white > a {
+    z-index: 2;
+  }
+  
+  .text-white > h1 {
+    z-index: 2;
+    align-self: flex-end;
+    padding-bottom: 2rem;
+  }
+
+  .text-white {
+    display: flex;
+    justify-content: flex-start;
+    /* padding-right: 8rem !important; */
+    padding-left: 11rem !important;
+    padding-top: 9rem;
+  }
 
