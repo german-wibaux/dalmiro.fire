@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ArticleService } from '../../services/article.service';
 
 import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +10,16 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('myModal') myModal: ElementRef;
   // properties: PropiedadInterface[];
   editState: boolean = false;
   // propertyToEdit: PropiedadInterface;
 
   constructor(
     private articlesService: ArticleService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private authservice: AuthService,
+    private router: Router
   ) { 
     this.articlesService.getArticles().subscribe( properties => {
       /** List every properties */
@@ -34,6 +38,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() { }  
 
+  user = {
+    email: '',
+    password: ''
+ };
+
   // updateCurso(property: PropiedadInterface) {
   //   this.propertiesService.updateProperty(property);
   // }
@@ -43,6 +52,16 @@ export class HomeComponent implements OnInit {
       const element = document.querySelector ( "#" + f )      
       if ( element ) element.scrollIntoView ( )
     });    
+  }
+
+  signInWithEmail() {
+    this.authservice.signInRegular(this.user.email, this.user.password)
+       .then((res) => {
+          
+        
+          this.router.navigate(['/private']);
+       })
+       .catch((err) => console.log('error: ' + err));
   }
 
 }

@@ -43,8 +43,10 @@
                                 
                             </li>
                             <li class="nav-item dropdown">
-                                <a routerLink='/login' class="nav-link button hvr-wobble-bottom" *ngIf='!isLoggedIn()'>Ingresar</a>
-                                
+                                <a routerLink='/login' class="nav-link button hvr-wobble-bottom" data-toggle="modal" data-target="#myModal" *ngIf='!isLoggedIn()'>Ingresar</a>
+                                <!-- <button class="nav-link button hvr-wobble-bottom" data-toggle="modal" data-target="#myModal"   >
+                                    Open modal
+                                  </button> -->
                             </li>
                             <li class="nav-item dropdown">
                                 <a routerLink='/private' class="nav-link button hvr-wobble-bottom" *ngIf='isLoggedIn()' >Administracion</a>
