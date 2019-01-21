@@ -9,13 +9,22 @@ import { ArticleService } from '../services/article.service';
 })
 export class NewsComponent implements OnInit {
 
-  articles:  ArticleInterface[] = [];
+  articlesOffer:  ArticleInterface[] = [];
+  articlesNews:  ArticleInterface[] = [];
+
 
   constructor(private articleService: ArticleService) { 
     this.articleService.getArticles().subscribe( articles => {
       /** List every properties */
       //console.log(articles);
-      this.articles = articles;
+      articles.forEach(element => {
+        if (element.offer) {
+          this.articlesOffer.push(element);
+        } else if(element.news) {
+          this.articlesNews.push(element);
+        }
+      });
+      
       }
     );
            
