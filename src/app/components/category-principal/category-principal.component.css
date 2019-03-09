@@ -1,0 +1,226 @@
+@media (min-width: 320px) {
+    .section-principal {
+        /* display: none !important ; */
+        display: none !important;
+        /* text-align: -webkit-center; */
+    }
+    .container-paral {
+        
+        width: 330px !important;
+        height: 255px !important;
+    }
+   
+    .section-responsive {
+        display: block !important;
+    }
+    .section-responsive > .container {
+        text-align: -webkit-center;
+    }
+    
+    /* .map-dalmiro {
+        width: 25rem !important;
+        height: 35rem !important;
+    } */
+
+    .navbar-brand {
+        display: none ;
+    }
+
+    .text-white > h1 {
+        display: none ;
+    }
+
+}
+
+@media (min-width: 1024px) { 
+    .navbar-brand {
+        display: block !important;
+    }
+
+    .text-white > h1 {
+        display: block !important;
+    }
+}
+
+
+@media (min-width: 1240px) {
+    .section-principal {
+        /* display: flex !important ;*/
+         flex-direction: unset !important;
+         display: flex !important;         
+    }
+    .section-responsive {
+        display: none !important;
+    }
+    .navbar-brand {
+        display: block !important;
+    }
+
+    .text-white > h1 {
+        display: block !important;
+    }
+    
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.principal {
+    /* background-color: #ffad33; */
+    background-color: white;
+}
+
+.ventas {
+    /* background-color: #ff9900 !important; */
+    background-color: white !important;
+    width: 100% !important;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.alquileres {
+    /* background-color: #ffad33 !important; */
+    background-color: white !important;
+    width: 100% !important;
+    /* padding-top: 6rem; */
+}
+
+.card-footer {
+    display: flex !important;
+    /* right: 0; */
+    justify-content: flex-end !important;
+}
+
+.tag {
+    background-color: rgb(31, 26, 23);
+    float: left;
+    width: 200px;
+    height: auto;
+    font-family: 'Museo500-Regular', sans-serif;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-bottom-right-radius: 10px;
+    display: block;
+    /* margin-top: -50px; */
+    color: white;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.space-sm {
+    /* background-color: #ffad33; */
+    background-color: white;
+}
+
+.container-paral {
+    position: relative;
+    width: 305px !important;
+    height: 233px !important;
+    overflow: hidden;
+    }
+    .item-paral {
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    .item-paral img {
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+    }
+    .container-paral:hover .item-paral img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    cursor: pointer;
+    }
+
+    .section-principal{
+        display: flex
+    }
+
+
+    /* Glyph, by Harry Roberts */
+
+hr.style-eight {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.style-eight:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+
+hr.style-five {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px green;
+}
+hr.style-five:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
+}
+
+.justify-content-center > h4 {
+    padding: 1rem;
+}
+
+/* .space-sm {
+    padding: 0 !important;
+} */
+
+.map-dalmiro {
+    border: 1rem solid green;
+    width: 90% !important;
+    height: 35rem !important;
+}
+
+.map-dalmiro > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.space-sm > .main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.list-group-item {
+    background-color: #ffad33;
+}
+
+.list-group-item > a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.text-white > a {
+    z-index: 2;
+  }
+  
+  .text-white > h1 {
+    z-index: 2;
+    align-self: flex-end;
+    padding-bottom: 2rem;
+  }
+
+  .text-white {
+    display: flex;
+    justify-content: flex-start;
+    /* padding-right: 8rem !important; */
+    padding-left: 11rem !important;
+    padding-top: 9rem;
+  }
+

@@ -35,6 +35,7 @@ import { PrefinishedComponent } from './components/prefinished/prefinished.compo
 import { VariosComponent } from './components/varios/varios.component';
 import { ZocalosComponent } from './components/zocalos/zocalos.component';
 import { RevestimientosComponent } from './components/revestimientos/revestimientos.component';
+import { CategoryPrincipalComponent } from './components/category-principal/category-principal.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { RevestimientosComponent } from './components/revestimientos/revestimien
     VariosComponent,
     ZocalosComponent,
     RevestimientosComponent,
+    CategoryPrincipalComponent,
   ],
   imports: [
     BrowserModule,

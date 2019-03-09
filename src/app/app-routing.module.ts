@@ -18,6 +18,10 @@ import { TechnicalComponent } from './technical/technical.component';
 import { MelaminaComponent } from './components/melamina/melamina.component';
 import { PrefinishedComponent } from './components/prefinished/prefinished.component';
 import { VinilicoComponent } from './components/vinilico/vinilico.component';
+import { CategoryPrincipalComponent } from './components/category-principal/category-principal.component';
+import { ZocalosComponent } from './components/zocalos/zocalos.component';
+import { RevestimientosComponent } from './components/revestimientos/revestimientos.component';
+import { VariosComponent } from './components/varios/varios.component';
 
 
 const routes: Routes = [
@@ -26,7 +30,11 @@ const routes: Routes = [
     { path: 'new-article', canActivate:[AuthGuardService] , component: NewArticleComponent },
     { path: 'private', canActivate:[AuthGuardService], component: AdminComponent },
     { path: 'contact', component: ContactComponent },
-    { path: 'product', component: CategoryComponent },
+    { path: 'floor', component: CategoryComponent },
+    { path: 'zocalo', component: ZocalosComponent },
+    { path: 'revest', component: RevestimientosComponent },
+    { path: 'varios', component: VariosComponent },
+    { path: 'product', component: CategoryPrincipalComponent },
     { path: 'melamina', component: MelaminaComponent },
     { path: 'prefinished', component: PrefinishedComponent },
     { path: 'vinilico', component: VinilicoComponent },
